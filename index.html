@@ -12,37 +12,33 @@
 
 <body>
     <div class="container">
-        <div class="output">
-            <div data-previous-operand class="previous-operand"></div>
-            <div data-current-operand class="current-operand"></div>
-            <div class="icons">
-                <i class="fa-regular fa-timer"></i>
-                <i class="fa-regular fa-delete-left"></i>
 
-            </div>
-        </div>
-        <button data-all-clear>C</button>
-        <button data-brackets>()</button>
-        <button data-operation>%</button>
-        <button data-number>/</button>
-        <button data-number>7</button>
-        <button data-number>8</button>
-        <button data-number>9</button>
-        <button data-operation>*</button>
-        <button data-number>4</button>
-        <button data-number>5</button>
-        <button data-number>6</button>
-        <button data-operation>-</button>
-        <button data-number>1</button>
-        <button data-number>2</button>
-        <button data-number>3</button>
-        <button data-operation>+</button>
-        <button data-operation>+/-</button>
-        <button data-number>.</button>
-        <button data-number>0</button>
-        <button data-equals>=</button>
+        <input type="text" id="inputtext" placeholder="0">
+
+
+        <button onclick="clr()" data-all-clear>C</button>
+        <button onclick="del()" data-delete>DEL</button>
+        <button onclick="calculate('%')" data-operation>%</button>
+        <button onclick="calculate('/')" data-number>/</button>
+        <button onclick="calculate(7)" data-number>7</button>
+        <button onclick="calculate(8)" data-number>8</button>
+        <button onclick="calculate(9)" data-number>9</button>
+        <button onclick="calculate('*')" data-operation>*</button>
+        <button onclick="calculate(4)" data-number>4</button>
+        <button onclick="calculate(5)" data-number>5</button>
+        <button onclick="calculate(6)" data-number>6</button>
+        <button onclick="calculate('-')" data-operation>-</button>
+        <button onclick="calculate(1)" data-number>1</button>
+        <button onclick="calculate(2)" data-number>2</button>
+        <button onclick="calculate(3)" data-number>3</button>
+        <button onclick="calculate('+')" data-operation>+</button>
+        <button onclick="calculate('()')" data-brackets>()</button>
+        <button onclick="calculate('.')" data-number>.</button>
+        <button onclick="calculate(0)" data-number>0</button>
+        <button onclick="result()" data-equals>=</button>
     </div>
+    <script src="app.js"></script>
 </body>
-<script src="app.js"></script>
+
 
 </html>

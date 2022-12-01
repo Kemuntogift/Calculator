@@ -1,38 +1,20 @@
-class Calculator {
-    constructor(previousOperandTextElement, currentOperandTextElement) {
-        this.previousOperandTextElement = previousOperandTextElement
-        this.currentOperandTextElement = currentOperandTextElement
-        this.clear();
-    }
+let inputResult = document.getElementById('inputtext');
+const equalsButton = document.querySelector('data-equals')
+    // const bracketButton = document.querySelector('data-brackets');
+    // bracketButton.addEventListener
 
-    clear() {
-        this.currentOperand = '';
-        this.previousOperand = '';
-        this.operation = undefined;
-    }
-
-    delete() {
-
-    }
-
-    appendNumber() {
-
-    }
-
-    chooseOperation() {
-
-    }
-
-    compute() {
-
-    }
+let calculate = (number) => {
+    inputResult.value = inputResult.value + number;
 }
 
+let result = () => {
+    inputResult.value = eval(inputResult.value)
+}
 
+function clr() {
+    inputResult.value = "";
+}
 
-const numberButtons = document.querySelectorAll('data-number')
-const operationButtons = document.querySelectorAll('data-operation')
-const equalsButton = document.querySelector('data-equals')
-const bracketButton = document.querySelector('data-brackets')
-const deleteButton = document.querySelector('fa-delete-left')
-const allClearButton = document.querySelector('data-all-clear')
+function del() {
+    inputResult.value = inputResult.value.slice(0, -1);
+}
